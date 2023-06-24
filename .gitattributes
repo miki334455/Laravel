@@ -1,0 +1,16 @@
+* text=auto              # 全てのファイルのうち、テキストと判断したファイルは LF に変換する
+# 改行コードの制御
+*.txt     text           # .txt ファイルは改行コード変換を行う (上のアスタリスク * 指定に倣うので LF に変換する)
+*.vcproj  text eol=crlf  # .vcproj ファイルは強制的に CRLF に変換する
+*.sh      text eol-lf    # .sh ファイルは強制的に LF に変換する
+*.jpg     -text          # .jpg ファイルはテキストとして解釈しない
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
